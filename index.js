@@ -7,7 +7,9 @@ let movieRateing = document.querySelector(".rateing")
 let releseDate = document.querySelector(".r-date")
 let duretion = document.querySelector(".dureton")
 let cost = document.querySelector(".cost")
+let box = document.querySelector(".box")
 let plot = document.querySelector(".plot")
+let show =document.querySelector(".show")
 
 //fungtion To fatch movie detail's
 
@@ -15,7 +17,8 @@ let plot = document.querySelector(".plot")
 // adding event letionar to search bar
 searchBtn.addEventListener("click", function () {
     if (searchInput.value !== "") {
-        card.classList.remove("hidden")        
+        card.classList.remove("hidden")  
+        show.classList.add("hidden")   
         fetchData(searchInput.value);
     }
 
@@ -40,8 +43,9 @@ async function fetchData(movie) {
         movieRateing.innerHTML = data.Rated;
         releseDate.innerHTML = data.Released;
         duretion.innerHTML = data.Runtime;
-        cost.innerHTML = data.Genre
-        plot.innerHTML = data.Plot
+        cost.innerHTML = data.Genre;
+        plot.innerHTML = data.Plot;
+        box.innerHTML =data.BoxOffice;
 
     } catch (error) {
         console.error('Error fetching data:', error);
