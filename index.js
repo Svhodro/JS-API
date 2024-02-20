@@ -36,6 +36,7 @@ async function fetchData(movie) {
         const response = await fetch(apiUrl); // Replace with your API endpoint
         if (!response.ok) {
             throw new Error('Network response was not ok');
+            
         }
         const data = await response.json(); // Parse the response body as 
         console.log('Fetched data:', data);
