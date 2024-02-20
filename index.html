@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -7,18 +7,122 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/tailwind.config.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="bg-neutral">
     <nav>
+        <!--nav start-->
+        <div class="navbar sm:flex sm:flex-col sm:gap-3 lg:flex-row lg:justify-between">
+            <div class="">
+                <a class="btn btn-ghost text-2xl text-white font-bold">Movie App</a>
+            </div>
+            <div class="sm:flex sm:flex-row sm:gap-3">
+                <div class="form-control">
+                    <input type="text" placeholder="Inter A Movie Name"
+                        class="input input-bordered w-36 md:w-auto sm:w-56 " />
+                </div>
+                <div class="dropdown dropdown-end">
 
+                    <div class="btn btn-active btn-primary search">Search</div>
+                </div>
+            </div>
+        </div>
+        <!--nav end-->
     </nav>
     <main>
-
+        <!--carosel part start-->
+        <div class="carousel w-full h-[42vw]">
+            <div id="slide1" class="carousel-item relative w-full">
+                <img src="https://teaser-trailer.com/wp-content/uploads/Polar-new-banner.jpg" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <img src="https://pbs.twimg.com/media/FS8Y7uiVUAE5Ex9.jpg:large" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/05/venom-header-image-1.jpg"
+                    class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <img src="https://i0.wp.com/www.aceshowbiz.com/images/still/pacific-rim-pstr07.jpg" class="w-full" />
+                <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+        <!--carosel part end-->
+        <!--card section start-->
+<section class="flex justify-center w-full my-2 ">
+    <div class="card w-[70%] bg-base-100 shadow-xl hidden">
+        <figure class="px-10 pt-10">
+            <img src="https://www.bollywoodhungama.com/wp-content/uploads/2022/11/Pathaan-5.jpg" alt="Album"
+            class="movie-img  object-contain" />
+        </figure>
+        <div class="card-body items-center text-center">
+            <div class="card-body flex ">
+                <p class="movie-name text-4xl font-bold text-slate-600">Pathan</p>
+                <p class="text-2xl"> Rateing : <span class="rateing text-slate-800">5.4</span></p>
+               </div>               
+               <div class="card-body flex gap-2">
+                <p class="text-2xl text-black font-bold">Relese-Date : <span class=" r-date text-slate-800">2/2/2024</span></p>
+                <p class="text-2xl text-black font-bold">Duretion : <span class="dureton text-slate-800">1h50min</span></p>
+                <p class="text-2xl text-black font-bold">Type : <span class="cost text-slate-800"></span></p>
+                <p class="text-2xl text-black font-bold">Plot : <span class="plot text-slate-800"></span></p>
+               </div>
+        </div>
+    </div>
+</section>
+        
     </main>
-    <footer>
 
+    <footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <nav class="grid grid-flow-col gap-4">
+            <a class="link link-hover">About us</a>
+            <a class="link link-hover">Contact</a>
+            <a class="link link-hover">Jobs</a>
+            <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+            <div class="grid grid-flow-col gap-4">
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                        </path>
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z">
+                        </path>
+                    </svg></a>
+                <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        class="fill-current">
+                        <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z">
+                        </path>
+                    </svg></a>
+            </div>
+        </nav>
+        <aside>
+            <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+        </aside>
     </footer>
+
     <script src="/index.js"></script>
 </body>
 
