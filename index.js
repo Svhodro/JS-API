@@ -16,6 +16,7 @@ let show =document.querySelector(".show")
 
 // adding event letionar to search bar
 searchBtn.addEventListener("click", function () {
+console.log("ghuuuu");
     if (searchInput.value !== "") {
         card.classList.remove("hidden")  
         show.classList.add("hidden")   
